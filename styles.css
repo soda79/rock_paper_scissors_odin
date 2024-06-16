@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto";
+}
+html, body{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+html{
+    position: relative;
+}
+@keyframes float{
+    0%{
+        transform: translateY(0px)
+    }
+    50%{
+        transform: translateY(20px);
+    }
+    100%{
+        transform: translateY(0px)
+    }
+}
+@keyframes touch_user {
+    0%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(-300px);
+    }
+    100%{
+        transform:translateX(0px);
+    }
+}
+@keyframes touch_com {
+    0%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(300px);
+    }
+    100%{
+        transform:translateX(0px);
+    }
+}
+@keyframes roll {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-100px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+@keyframes drawn {
+    0%{
+        transform: translateY(-100px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.score{
+    display:flex;
+    justify-content: space-between;
+    margin: 45px;
+}
+
+.rps_heading_container{
+    display:flex;
+    justify-content: center;
+}
+
+.roll{
+    display: flex;
+    animation: roll 400ms 3 !important;
+}
+
+.shown{
+    display: flex;
+    animation: float 2s infinite;
+}
+
+.hidden{
+    display: none !important;
+}
+
+.drawn{
+    display: flex !important; 
+    animation: drawn 400ms 1 !important; 
+}
+
+.rps_img_container{
+    height: 230px;
+    display:flex;
+    justify-content: space-around;
+    margin-top: 100px;
+    padding-top: 70px;
+}
+
+.rps_img{
+    display: flex;
+    width: 200px;
+}
+
+.start_button{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.options_container{
+    display:none;
+    justify-content: space-evenly;
+}
+
+.game_end{
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    background: rgb(0,0,0, 0.9);
+}
+.result{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 200px;
+}
+
+#user_wins, #com_wins{
+    display: none;
+    font-size: 70px;
+    color: white;
+
+}
+.reload_container{
+    display: flex;
+    justify-content: center;
+
+}
+button{
+    font-size: 22px;
+    font-weight: 700;
+    color: black;
+    height: 70px;
+    width: 130px;
+    background-color: white;
+    border-style:solid;
+    border-width: 4px;
+    border-radius: 7px;
+    outline: none;
+    cursor: pointer;
+}
+button:hover{
+    color:white;
+    background-color: black;
+    border-color: black;
+}
+.no_hover{
+    pointer-events: none;
+}
